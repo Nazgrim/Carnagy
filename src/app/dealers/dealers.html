@@ -1,0 +1,167 @@
+<div class="row" style="margin-bottom: 15px;">
+    <h1 class="col-md-6" style="margin:0;">Dealers</h1>
+    <div class="col-md-6">
+        <div class="form-inline">
+            <div class="form-group pull-right" style="margin-left: 4px;">
+                <select class="form-control">
+                    <option>Last week</option>
+                    <option>Last month</option>
+                    <option>Last 3 months</option>
+                    <option>YTD</option>
+                </select>
+            </div>
+            <div class="form-group pull-right">
+                <select class="form-control">
+                    <option>Any location</option>
+                    <option>Province</option>
+                    <option>National</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Website</th>
+                    <th>Vehicles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dealer in ::dealers | orderBy: 'name'">
+                    <td>
+                        <a ui-sref="dealer({ id: dealer.id })">{{::dealer.name}}</a>
+                    </td>
+                    <td>
+                        <span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{::dealer.dealerPlace}}
+                    </td>
+                    <td>
+                        <a href="{{::dealer.dealerUrl}}" target="_blank">
+                            <span class="glyphicon glyphicon-link"></span>&nbsp;{{::dealer.domain}}
+                        </a>                        
+                    </td>
+                    <td>
+                        {{::dealer.cars.length}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row hidden">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-5">
+                <img src="http://images.dealer.com/autodata/ca/stockphoto-color/2015/CAC50BUS031A0/40U.jpg">
+            </div>
+            <div class="col-md-7">
+                <h1>2015 Buick Enclave Leather</h1>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Your Price</td>
+                            <td class="text-right">$53,580
+                                <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="The average price on your market"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Market Price</td>
+                            <td class="text-right">$54,890
+                                <span style="color:green">(+2,5%)</span> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="The average price in the market"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Your Rank</td>
+                            <td class="text-right">#6
+                                <span style="color:red">(-2)</span> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="The rank is calculated based on the selling price of the vehicle among dealers"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <div class="pull-right">
+                        <a class="btn btn-primary">Car in stock</a>
+                        <a class="btn btn-primary" href="/DillerRating">Rank details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <h3 class="text-center">Cars in stock</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Stock</th>
+                            <th>Year</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Bodystyle</th>
+                            <th>Price</th>
+                            <th>Transmission</th>
+                            <th>Engine</th>
+                            <th>Fuel Type</th>
+                            <th>Drivetrain</th>
+                            <th>Ext. Colour</th>
+                            <th>Int. Colour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>15C205</span>
+                            </td>
+                            <td>2015</td>
+                            <td>Buick</td>
+                            <td>Enclave</td>
+                            <td>SUV</td>
+                            <td>$53,580</td>
+                            <td>M7V</td>
+                            <td>3.6L V-6 cyl</td>
+                            <td>Regular Unleaded</td>
+                            <td>Front-wheel Drive</td>
+                            <td>White Opal</td>
+                            <td>CHOCCACHINO</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>15C206</span>
+                            </td>
+                            <td>2015</td>
+                            <td>Buick</td>
+                            <td>Enclave</td>
+                            <td>SUV</td>
+                            <td>$53,775</td>
+                            <td>M7V</td>
+                            <td>3.6L V-6 cyl</td>
+                            <td>Regular Unleaded</td>
+                            <td>Front-wheel Drive</td>
+                            <td>Carbon Black</td>
+                            <td>CHOCCACHINO</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>15C207</span>
+                            </td>
+                            <td>2015</td>
+                            <td>Buick</td>
+                            <td>Enclave</td>
+                            <td>SUV</td>
+                            <td>$58,350</td>
+                            <td>M7X</td>
+                            <td>3.6L V-6 cyl</td>
+                            <td>Regular Unleaded</td>
+                            <td>Front-wheel Drive</td>
+                            <td>Crimson Red Tintcoat</td>
+                            <td>CHOCCACHINO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
