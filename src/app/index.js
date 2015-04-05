@@ -1,13 +1,13 @@
 'use strict';
 
-//import MainCtrl from './main/main.controller';
+import MainCtrl from './main/main.controller';
 import NavbarCtrl from '../components/navbar/navbar.controller';
 import SidebarCtrl from '../components/sidebar/sidebar.controller';
 import DealersCtrl from './dealers/dealers.controller';
 import DealerCtrl from './dealers/dealer.controller';
 
 angular.module('carnagy', ['ngAnimate', 'ngCookies', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap'])
-  //.controller('MainCtrl', MainCtrl)
+  .controller('MainCtrl', MainCtrl)
   .controller('NavbarCtrl', NavbarCtrl)
   .controller('SidebarCtrl', SidebarCtrl)
   .controller('DealersCtrl', DealersCtrl)
@@ -25,11 +25,11 @@ angular.module('carnagy', ['ngAnimate', 'ngCookies', 'ngSanitize', 'ngResource',
     });
     
     $stateProvider
-//      .state('home', {
-//        url: '/',
-//        templateUrl: 'app/main/main.html',
-//        controller: 'MainCtrl'
-//      })
+      .state('main', {
+        url: '/',
+        templateUrl: 'app/main/main.html',
+        controller: 'MainCtrl'
+      })
       .state('dealers', {
         url: '/dealers',
         resolve: {

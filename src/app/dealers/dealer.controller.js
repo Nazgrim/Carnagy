@@ -2,7 +2,7 @@
 
 class DealerCtrl {
     constructor($scope, dealer) {
-        console.log(dealer);
+        //console.log(dealer);
         
         $scope.dealer = dealer;
         $scope.estimatedValue = 0.0;
